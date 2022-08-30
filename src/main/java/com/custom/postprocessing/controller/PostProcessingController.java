@@ -26,8 +26,8 @@ public class PostProcessingController {
     }
     
     @GetMapping(path = "/welcome")
-    public void welcome() {
+    public String welcome() {
     	
-    	System.out.println("welcome msg");
+    	return "welcome msg";
     }
 }
