@@ -18,11 +18,11 @@ public class PostProcessingController {
     private PostProcessingScheduler postProcessingScheduler;
 
     @GetMapping(path = "/postprocess")
-    public void manualPostProcessBatch() {
+    public String manualPostProcessBatch() {
     	
     	System.out.println("using batch");
 
-        postProcessingScheduler.smartCommPostProcessing();
+        return postProcessingScheduler.smartCommPostProcessing();
     }
     
     @GetMapping(path = "/welcome")
